@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Month" representedClassName="Month" syncable="YES" codeGenerationType="class">
+        <attribute name="monthNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="monthValue" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="year" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Year" inverseName="months" inverseEntity="Year" syncable="YES"/>
+    </entity>
+    <entity name="Year" representedClassName="Year" syncable="YES" codeGenerationType="class">
+        <attribute name="yearNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="months" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Month" inverseName="year" inverseEntity="Month" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Month" positionX="268.23046875" positionY="-28.640625" width="128" height="90"/>
+        <element name="Year" positionX="-45" positionY="18" width="128" height="75"/>
+    </elements>
+</model>
